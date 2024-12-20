@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Weather App</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="src/styles.css" />
+    <!-- Lottie Player -->
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+  </head>
+  <body class="bg-dark text-light">
+    <div class="container position-relative py-5">
+      <!-- Lottie Animation -->
+      <div id="weather-animation" class="lottie-animation"></div>
+
+      <!-- Weather App Container -->
+      <div class="weather-app p-4 shadow-lg rounded bg-secondary">
+        <!-- App Header -->
+        <header class="text-center mb-4">
+          <h1 class="display-4 fw-bold text-warning">🌙 Weather App</h1>
+          <p class="lead text-muted">Your gateway to real-time weather updates!</p>
+        </header>
+
+        <!-- Search Form -->
+        <form id="search-form" class="d-flex flex-column align-items-center mb-4 gap-3">
+          <input
+            type="search"
+            class="form-control form-control-lg rounded-pill bg-dark text-light border-0 shadow"
+            placeholder="Enter a city..."
+            id="search-input"
+            required
+          />
+          <button class="btn btn-rounded btn-lg btn-gradient shadow" type="submit">
+            <i class="bi bi-search"></i> Search
+          </button>
+        </form>
+
+        <!-- Weather Information -->
+        <div class="text-center">
+          <h2 id="current-city" class="mb-3 text-light">City</h2>
+          <p id="current-details" class="text-muted fs-5">
+            Weather details go here...
+          </p>
+          <div class="display-2 fw-bold text-info">
+            <span id="current-temperature">--</span>
+            <span class="fs-4">°C</span>
+          </div>
+        </div>
+
+        <!-- Date -->
+        <div class="text-center mt-3">
+          <p id="current-date" class="text-muted fs-6"></p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center mt-4">
+          <small>
+            Coded by
+            <a
+              href="https://github.com/kidehae"
+              target="_blank"
+              class="text-decoration-none text-info fw-bold"
+              >MOsisa Boneya</a
+            >
+          </small>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Axios Library -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="src/script.js"></script>
+  </body>
+</html>
