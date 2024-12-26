@@ -31,17 +31,20 @@
         </header>
 
         <!-- Search Form -->
-        <form id="search-form" class="d-flex flex-column align-items-center mb-4 gap-3">
-          <input
-            type="search"
-            class="form-control form-control-lg rounded-pill bg-dark text-light border-0 shadow"
-            placeholder="Enter a city..."
-            id="search-input"
-            required
-          />
-          <button class="btn btn-rounded btn-lg btn-gradient shadow" type="submit">
-            <i class="bi bi-search"></i> Search
-          </button>
+        <form id="search-form" class="d-flex align-items-center mb-4 gap-2">
+          <div class="input-group">
+            <input
+              type="search"
+              class="form-control form-control-lg rounded-pill bg-dark text-light border-0 shadow"
+              placeholder="Enter a city..."
+              id="search-input"
+              required
+            />
+            <button class="btn btn-gradient rounded-circle search-btn" type="submit" value=">">
+              >
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
         </form>
         <div class="d-flex justify-content-center gap-3 mb-4">
           <button id="current-location" class="btn btn-info btn-lg rounded-pill">
