@@ -6,7 +6,7 @@ function formatDate(date) {
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   let day = days[date.getDay()];
 
-  return `${day} ${hours}:${minutes}`;
+  return ${day} ${hours}:${minutes};
 }
 
 // Display Temperature and Animation
@@ -39,15 +39,15 @@ function displayTemperature(response) {
   // Load Appropriate Animation
   animationContainer.innerHTML = "";
   if (weatherMain.includes("clear")) {
-      animationContainer.innerHTML = `<dotlottie-player src="https://lottie.host/9482a99c-aab9-4156-b674-f7834fe7f411/eGQk9Wd6jH.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>`;
+      animationContainer.innerHTML = <dotlottie-player src="https://lottie.host/9482a99c-aab9-4156-b674-f7834fe7f411/eGQk9Wd6jH.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>;
   } else if (weatherMain.includes("rain")) {
-      animationContainer.innerHTML = `<dotlottie-player src="https://lottie.host/6da3dac0-8895-4e7f-b642-52148893a665/AbVDM0Osgt.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>`;
+      animationContainer.innerHTML = <dotlottie-player src="https://lottie.host/6da3dac0-8895-4e7f-b642-52148893a665/AbVDM0Osgt.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>;
   } else if (weatherMain.includes("cloud")) {
-      animationContainer.innerHTML = `<dotlottie-player src="https://lottie.host/6e587795-6eac-4141-96f9-d0dce3eede57/nN0ZoDBMfK.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>`;
+      animationContainer.innerHTML = <dotlottie-player src="https://lottie.host/6e587795-6eac-4141-96f9-d0dce3eede57/nN0ZoDBMfK.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>;
   } else if (weatherMain.includes("snow")) {
-      animationContainer.innerHTML = `<dotlottie-player src="https://lottie.host/58aaa1aa-f982-4ae3-a9e1-765a5e21b7e9/rXJ1jCvCiq.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>`;
+      animationContainer.innerHTML = <dotlottie-player src="https://lottie.host/58aaa1aa-f982-4ae3-a9e1-765a5e21b7e9/rXJ1jCvCiq.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>;
   } else {
-      animationContainer.innerHTML = `<p>No animation available for this weather condition.</p>`;
+      animationContainer.innerHTML = <p>No animation available for this weather condition.</p>;
   }
 
   // Update Date and Time
@@ -79,7 +79,8 @@ function convertToCelsius(fahrenheit) {
 toggleUnitButton.addEventListener("click", () => {
   const currentTemp = parseFloat(temperatureElement.textContent);
 
-  if (isCelsius) {
+Kitem, [12/26/2024 9:49 PM]
+if (isCelsius) {
       const fahrenheitTemp = convertToFahrenheit(currentTemp).toFixed(1);
       temperatureElement.textContent = fahrenheitTemp; // Update temperature display
       unitElement.textContent = "°F"; // Update unit display to Fahrenheit
