@@ -43,27 +43,45 @@
             <i class="bi bi-search"></i> Search
           </button>
         </form>
-
-        <!-- Weather Information -->
-        <div class="text-center">
-          <h2 id="current-city" class="mb-3 text-light">City</h2>
-          <p id="current-details" class="text-muted fs-5">
-            Weather details go here...
-          </p>
-          <div class="display-2 fw-bold text-info">
-            <span id="current-temperature">--</span>
-            <span class="fs-4">°C</span>
+        <div class="d-flex justify-content-center gap-3 mb-4">
+          <button id="current-location" class="btn btn-info btn-lg rounded-pill">
+            <i class="bi bi-geo-alt"></i> Current Location
+          </button>
+          <button id="unit-toggle" class="btn btn-warning btn-lg rounded-pill">
+            Switch to °F
+          </button>
+        </div>
+        
+        <div id="loading-spinner" class="text-center d-none">
+          <div class="spinner-border text-info" role="status">
+            <span class="visually-hidden">Loading...</span>
           </div>
         </div>
 
+        <!-- Weather Information -->
+        <div class="row">
+          <!-- Current Weather -->
+          <div class="col-12">
+            <div class="text-center">
+              <h2 id="current-city" class="mb-3 text-light">City</h2>
+              <p id="current-details" class="text-light fs-5">
+                Weather details go here...
+              </p>
+              <div class="display-2 fw-bold text-info">
+                <span id="current-temperature">--</span>
+                <span class="fs-4">°C</span>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- Date -->
         <div class="text-center mt-3">
-          <p id="current-date" class="text-muted fs-6"></p>
+          <p id="current-date" class="text-light fs-6"></p>
         </div>
 
         <!-- Footer -->
         <footer class="text-center mt-4">
-          <small>
+          <small class="text-light">
             Coded by
             <a
               href="https://github.com/Mosisaboneya4"
