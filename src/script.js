@@ -45,6 +45,47 @@ function formatDate(date) {
       animationContainer.innerHTML = `<p>No animation available for this weather condition.</p>`;
     }
   }
+
+// Unit Conversion Script
+let isCelsius = true; // Default unit is Celsius
+
+// Get DOM Elements
+const temperatureElement = document.querySelector("#current-temperature");
+const unitElement = document.querySelector("#temperature-unit"); // Get the unit display element
+const toggleUnitButton = document.createElement("button"); // Create toggle button
+toggleUnitButton.id = "toggle-unit";
+toggleUnitButton.textContent = "Switch to °F";
+toggleUnitButton.classList.add("btn", "btn-secondary");
+document.querySelector(".weather-app").appendChild(toggleUnitButton); // Add button to the app
+
+// Conversion Functions
+function convertToFahrenheit(celsius) {
+    return (celsius * 9) / 5 + 32;
+}
+
+function convertToCelsius(fahrenheit) {
+    return ((fahrenheit - 32) * 5) / 9;
+}
+
+// Handle Unit Toggle
+toggleUnitButton.addEventListener("click", () => {
+    const currentTemp = parseFloat(temperatureElement.textContent);
+
+    if (isCelsius) {
+        const fahrenheitTemp = convertToFahrenheit(currentTemp).toFixed(1);
+        temperatureElement.textContent = fahrenheitTemp; // Update temperature display
+        unitElement.textContent = "°F"; // Update unit display to Fahrenheit
+        toggleUnitButton.textContent = "Switch to °C"; // Update button text
+        isCelsius = false; // Update state
+    } else {
+        const celsiusTemp = convertToCelsius(currentTemp).toFixed(1);
+        temperatureElement.textContent = celsiusTemp; // Update temperature display
+        unitElement.textContent = "°C"; // Update unit display to Celsius
+        toggleUnitButton.textContent = "Switch to °F"; // Update button text
+        isCelsius = true; // Update state
+    }
+});
+
   
   // Search Function
   function search(event) {
